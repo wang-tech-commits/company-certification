@@ -1,6 +1,6 @@
 <?php
 
-namespace MrwangTc\CompanyCertification\Certfication\Controller;
+namespace MrwangTc\CompanyCertification\Certification\Controller;
 
 use Illuminate\Routing\Controller;
 use Jason\Api;

@@ -14,7 +14,7 @@ class CompanyCertification
             'prefix'    => $prefix,
         ], function (Router $router) {
             $router->get('companycertification', 'CompanyCertificationController@index');
-            $router->get('companycertification/create', 'CompanyCertificationController@index');
+            $router->get('companycertification/create', 'CompanyCertificationController@create');
             $router->post('companycertification', 'CompanyCertificationController@store');
             $router->put('companycertification/{companycertification}', 'CompanyCertificationController@update');
         });
