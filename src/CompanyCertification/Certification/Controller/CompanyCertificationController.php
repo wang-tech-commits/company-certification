@@ -55,7 +55,7 @@ class CompanyCertificationController extends Controller
     public function update(CompanyCertificationRequest $request, CompanyCertification $companycertification)
     {
         $user = Api::user();
-        if ($user->is_verified) {
+        if ($user->is_company_verified) {
             return $this->failed('认证已通过，不能修改');
         }
         if ($user->companyCertification->id != $companycertification->id) {

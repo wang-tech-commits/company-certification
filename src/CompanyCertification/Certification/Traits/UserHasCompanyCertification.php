@@ -12,7 +12,7 @@ trait UserHasCompanyCertification
         return $this->hasOne(CompanyCertification::class);
     }
 
-    public function getIsVerifiedAttribute()
+    public function getIsCompanyVerifiedAttribute()
     {
         return $this->companyCertification && ($this->companyCertification->status == 1);
     }
