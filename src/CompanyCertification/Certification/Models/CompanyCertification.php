@@ -39,7 +39,7 @@ class CompanyCertification extends Model
 
     protected function getCodeTypeTextAttribute()
     {
-        return config('company_code')[$this->code_type];
+        return config('companycertification.company_code')[$this->code_type];
     }
 
     protected function getStatusTextAttribute()
