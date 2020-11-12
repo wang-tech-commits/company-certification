@@ -3,7 +3,7 @@
 namespace MrwangTc\CompanyCertification\Certification\Traits;
 
 use Illuminate\Database\Eloquent\Relations\HasOne;
-use MrwangTc\CompanyCertification\Certfication\Models\CompanyCertification;
+use MrwangTc\CompanyCertification\Certification\Models\CompanyCertification;
 
 trait UserHasCompanyCertification
 {

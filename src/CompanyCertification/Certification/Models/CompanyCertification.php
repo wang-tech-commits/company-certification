@@ -28,7 +28,7 @@ class CompanyCertification extends Model
         parent::boot();
 
         self::creating(function ($certification) {
-            $certification->status = config('companycertification.verified_default');
+            $certification->status = CompanyCertification::CERTIFICATION_CHECK;
         });
     }
 

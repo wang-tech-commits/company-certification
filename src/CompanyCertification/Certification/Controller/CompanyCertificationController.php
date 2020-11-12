@@ -23,8 +23,14 @@ class CompanyCertificationController extends Controller
     public function create()
     {
         $code = config('companycertification.company_code');
+        foreach ($code as $key => $value) {
+            $data[] = [
+                'id'    => $key,
+                'title' => $value,
+            ];
+        }
         return $this->success([
-            'code_type' => $code,
+            'code_type' => $data,
         ]);
     }
 
