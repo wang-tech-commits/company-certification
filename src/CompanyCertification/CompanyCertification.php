@@ -13,10 +13,10 @@ class CompanyCertification
             'namespace' => '\MrwangTc\CompanyCertification\Certification\Controller',
             'prefix'    => $prefix,
         ], function (Router $router) {
-            $router->get('companycertification', 'CompanyCertificationController@index');
-            $router->get('companycertification/create', 'CompanyCertificationController@create');
-            $router->post('companycertification', 'CompanyCertificationController@store');
-            $router->put('companycertification/{companycertification}', 'CompanyCertificationController@update');
+            $router->get('certification/company', 'CompanyCertificationController@index');
+            $router->get('certification/company/create', 'CompanyCertificationController@create');
+            $router->post('certification/company', 'CompanyCertificationController@store');
+            $router->put('certification/company/{companycertification}', 'CompanyCertificationController@update');
         });
     }
 }
