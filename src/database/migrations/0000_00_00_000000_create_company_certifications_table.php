@@ -15,7 +15,6 @@ class CreateCompanyCertificationsTable extends Migration
     {
         Schema::create('company_certifications', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('industry_id')->comment('行业');
             $table->unsignedBigInteger('user_id')->index();
             $table->string('title', 100);
             $table->string('name', 32)->nullable();
