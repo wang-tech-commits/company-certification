@@ -4,12 +4,10 @@ namespace MrwangTc\CompanyCertification\Certification\Models;
 
 use Encore\Admin\Traits\DefaultDatetimeFormat;
 use Illuminate\Database\Eloquent\Model;
-use MrwangTc\CompanyCertification\Certification\Contracts\VerifiedCertification;
 use MrwangTc\CompanyCertification\Certification\Traits\CompanyCertificationTrait;
 
 class CompanyCertification extends Model
 {
-
     use CompanyCertificationTrait,
         DefaultDatetimeFormat;
 
@@ -24,22 +22,6 @@ class CompanyCertification extends Model
     ];
 
     protected $guarded = [];
-
-    protected static function boot()
-    {
-        parent::boot();
-
-        self::creating(function ($certification) {
-            $certification->status = CompanyCertification::CERTIFICATION_CHECK;
-        });
-
-        self::created(function ($certification) {
-            $instance = config('companycertification.verified_class');
-            if ($instance instanceof VerifiedCertification) {
-                $instance->autoVerified();
-            }
-        });
-    }
 
     public function user()
     {
