@@ -4,5 +4,5 @@ namespace MrwangTc\CompanyCertification\Certification\Contracts;
 
 interface VerifiedCertification
 {
-    public function autoVerified();
+    public function autoVerified($certification);
 }
